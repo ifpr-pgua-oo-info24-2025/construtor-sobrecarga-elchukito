@@ -6,21 +6,21 @@ public class Car
     private Engine engine;
     private Driver driver;
 
-    public Car(String model, String plate, String mark, String name, int numCNH, String type, int power)
+    public Car(String model, String plate, String mark, String name, int numCNH, String EngineName, String type, int power)
     {
         this.model = model;
         this.plate = plate;
         this.mark = mark;
-        this.engine = new Engine(type, power);
+        this.engine = new Engine(EngineName, type, power);
         this.driver = new Driver(name, numCNH);
     }
 
-    public Car(String model, String plate, String mark, String type, int power)
+    public Car(String model, String plate, String mark, String EngineName, String type, int power)
     {
         this.model = model;
         this.plate = plate;
         this.mark = mark;
-        this.engine = new Engine(type, power);
+        this.engine = new Engine(EngineName, type, power);
     }
 
     public String getModel()
@@ -73,6 +73,7 @@ public class Car
                    "\nPlate: " + this.plate +
                    "\nDriver name: " + this.driver.getName() +
                    "\nDriver numCNH: " + this.driver.getNumCNH() +
+                   "\nEngine name: " + this.engine.getName() + 
                    "\nEngine type: " + this.engine.getType() + 
                    "\nEngine power: " + this.engine.getPower();
         }
@@ -81,6 +82,7 @@ public class Car
             return "\nMark: " + this.mark +
                    "\nModel: " + this.model +
                    "\nPlate: " + this.plate +
+                   "\nEngine name: " + this.engine.getName() + 
                    "\nEngine type: " + this.engine.getType() + 
                    "\nEngine power: " + this.engine.getPower();
         }
