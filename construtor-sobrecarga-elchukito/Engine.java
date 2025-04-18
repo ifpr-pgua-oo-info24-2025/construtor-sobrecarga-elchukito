@@ -35,4 +35,11 @@ public class Engine
     {
         this.type = type;
     }
+
+    public String toString()
+    {
+        return  "\nEngine name: " + this.name + 
+                "\nEngine type: " + this.type + 
+                "\nEngine power: " + this.power;
+    }
 }

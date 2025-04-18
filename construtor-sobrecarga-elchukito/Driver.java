@@ -25,4 +25,10 @@ public class Driver
     {
         this.numCNH = numCNH;
     }
+
+    public String toString()
+    {
+        return  "\nDriver name: " + this.name + 
+                "\nDriver CNH: " + this.numCNH;
+    }
 }
